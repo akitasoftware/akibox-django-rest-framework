@@ -8,7 +8,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['id', 'first_name', 'last_name', 'email', 'phone']
 
 
-class FileSerializer(serializers.Serializer):
+class FileSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = File
         fields = ['id', 'created_at', 'contents']
