@@ -17,3 +17,9 @@ The Akita/Django integration lets you use integration tests you've written for
 your Django application as the source of API traffic that Akita will use to
 build the spec.  It works by wrapping the Django test client with an extra
 layer that captures requests and responses and sends them to Akita.
+
+## Running the Server
+
+```bash
+python manage.py runserver
+```
