@@ -18,6 +18,15 @@ your Django application as the source of API traffic that Akita will use to
 build the spec.  It works by wrapping the Django test client with an extra
 layer that captures requests and responses and sends them to Akita.
 
+## Installing Dependencies
+
+```bash
+# Create a python virtual environment and install dependencies
+python3 -m venv venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+```
+
 ## Running the Server
 
 ```bash
