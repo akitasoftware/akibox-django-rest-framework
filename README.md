@@ -23,3 +23,22 @@ layer that captures requests and responses and sends them to Akita.
 ```bash
 python manage.py runserver
 ```
+
+## Running the Tests
+
+Akibox uses `akita_django.test.Client` in place of `django.test.Client` in
+order to capture requests and responses from integration tests into an HTTP
+Archive (HAR) file, which Akita can use to generate a spec for Akibox.
+
+Run the tests:
+```bash
+./manage.py test
+```
+
+Look for `akita_trace.file.har` and `akita_trace.user.har`, which capture
+requests and responses against the `/files` and `/users` endpoints.
+
+## Adding New Tests
+
+The integration tests live in `akiboxImpl/tests.py`.  Try creating some new
+tests and look for the corresponding traffic in the HAR files.
